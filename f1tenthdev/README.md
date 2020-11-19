@@ -1,7 +1,11 @@
 # Dev Doc
 
 ## Setup
-1. Do everything written in the `README` of this repo until `Demo`.
+1. Develop environment: this repo + Unity
+2. Install Unity Editor through [unity hub](https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html)
+3. Git clone this repo into your local host
+4. Install the dependencies in the `requirement.txt` as `pip install -r requirements.txt`
+5. Then we should be able to load Unity project and start developing
 
 ## Creating new track
 1. Load the Unity project `sdsandbox/sdsim` in Unity.
