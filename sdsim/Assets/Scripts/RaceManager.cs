@@ -7,15 +7,13 @@ public class RaceManager : MonoBehaviour
 
     public GameObject StartButton;
     public GameObject StopButton;
-    public GameObject SplitButton;
-    public GameObject ContinueButton;
+    public GameObject ResetButton;
 
     void Awake()
     {
         StartButton.SetActive(true);
         StopButton.SetActive(false);
-        SplitButton.SetActive(false);
-        ContinueButton.SetActive(false);
+        ResetButton.SetActive(false);
     }
 
     public void StartRace()
@@ -27,8 +25,7 @@ public class RaceManager : MonoBehaviour
         }
         StartButton.SetActive(false);
         StopButton.SetActive(true);
-        SplitButton.SetActive(true);
-        ContinueButton.SetActive(false);
+        ResetButton.SetActive(true);
     }
 
     public void StopRace()
@@ -40,34 +37,15 @@ public class RaceManager : MonoBehaviour
         }
         StartButton.SetActive(true);
         StopButton.SetActive(false);
-        SplitButton.SetActive(false);
-        ContinueButton.SetActive(false);
+        ResetButton.SetActive(false);
     }
 
-    public void Split()
-    {   
-        Timer[] timers = GameObject.FindObjectsOfType<Timer>();
-        foreach(Timer t in timers)
-        {
-            t.SplitTime();
-        }
-        StartButton.SetActive(false);
-        StopButton.SetActive(true);
-        SplitButton.SetActive(false);
-        ContinueButton.SetActive(true);
-    }
-
-    public void Continue()
+    public void ResetRace()
     {
         Timer[] timers = GameObject.FindObjectsOfType<Timer>();
         foreach(Timer t in timers)
         {
-            t.ContinueTime();
+            t.ResetTimer();
         }
-        StartButton.SetActive(false);
-        StopButton.SetActive(true);
-        SplitButton.SetActive(true);
-        ContinueButton.SetActive(false);
     }
-
 }

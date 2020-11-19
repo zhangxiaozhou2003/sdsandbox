@@ -1,20 +1,18 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.Net;
 using System.Net.Sockets;
 using System;
+using UnityEngine.UI;
+using System.Globalization;
 
 namespace tk
 {
-
+    
     public class TcpMenuHandler : MonoBehaviour {
 
         public SceneLoader loader;
-        public string[] scene_names;
-        public GameObject ButtonGridLayout;
-        public GameObject ButtonPrefab;
         private tk.JsonTcpClient client;
 
         public void Init(tk.JsonTcpClient _client)
@@ -30,11 +28,7 @@ namespace tk
         }
 
         public void Start()
-        {   
-            foreach (string scene_name in scene_names)
-            {
-                AddButtonToMenu(scene_name);
-            }
+        {
         }
 
         public void OnDestroy()
@@ -80,10 +74,11 @@ namespace tk
         {
             JSONObject scenes = new JSONObject(JSONObject.Type.ARRAY);
 
-            foreach (string scene_name in scene_names)
-            {
-                scenes.Add(scene_name);
-            }
+            scenes.Add("generated_road");
+            scenes.Add("warehouse");
+            scenes.Add("sparkfun_avc");
+            scenes.Add("generated_track");
+            scenes.Add("roboracingleague_1");
 
             JSONObject json = new JSONObject(JSONObject.Type.OBJECT);
             json.AddField("scene_names", scenes);
@@ -101,50 +96,32 @@ namespace tk
             GlobalState.bCreateCarWithoutNetworkClient = false;
 
             string scene_name = jsonObject.GetField("scene_name").str;
-            LoadScene(scene_name);
-        }
-        
-        public void LoadScene(string scene_name)
-        {
-            // check wether the scene_name is in the scene_names list, if so, load it
-            if(Array.Exists(scene_names, element => element == scene_name))
+
+            if(scene_name == "generated_road")
             {
-                loader.LoadScene(scene_name);
-                Debug.Log("loaded scene");
+                loader.LoadGenerateRoadScene();
+            }
+            else if (scene_name == "warehouse")
+            {
+                loader.LoadWarehouseScene();
+            }
+            else if (scene_name == "sparkfun_avc")
+            {
+                loader.LoadAVCScene();
+            }
+            else if (scene_name == "generated_track")
+            {
+                loader.LoadGeneratedTrackScene();
+            }
+            else if (scene_name == "roboracingleague_1")
+            {
+                loader.LoadRoboRacingLeague1Scene();
             }
         }
-
+        
         void OnQuitApp(JSONObject json)
         {
             Application.Quit();
-        }
-
-        void AddButtonToMenu(string scene_name)
-        {   
-            // create a new button and add it to the grid layout
-            GameObject go = Instantiate(ButtonPrefab);
-            go.name = scene_name;
-            go.transform.SetParent(ButtonGridLayout.transform);
-            go.transform.localScale = Vector3.one;
-
-            // add a function to be called when the button is clicked
-            Button button = go.GetComponent<Button>();
-            button.onClick.AddListener(delegate {LoadScene(scene_name); });
-            
-            // modify the text to match the scene_name
-            GameObject text_go = go.transform.GetChild(0).gameObject;
-            Text text = text_go.GetComponent<Text>();
-            text.text = scene_name;
-
-            // try to load the preview image located in the Resources folder
-            Texture2D texture = Resources.Load<Texture2D>("UI/"+scene_name);
-            if (texture != null)
-            {
-                GameObject image_go = go.transform.GetChild(1).gameObject;
-                RawImage raw_image = image_go.GetComponent<RawImage>();
-                raw_image.texture = texture;
-             
-            }
-        }
+        }        
     }
 }

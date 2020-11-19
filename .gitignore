@@ -14,5 +14,6 @@ sdsim/Packages
 sdsim/ProjectSettings
 sdsim/Logs
 /debug.log
-/camera_a.png
-/camera_b.png
+/src/camera_a.png
+/src/camera_b.png
+env
