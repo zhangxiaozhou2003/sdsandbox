@@ -35,14 +35,30 @@ under construction...
 ## Train and predict
 Specified in the `README` of this repo.
 
-## Multi-client racing
+## Offline Multi-client racing
 The server support multi-client racing, but the screen would only split into two at most. Once you have your models, we can start racing.
 
-1. Start Unity project sdsim and bring up a scene.
+1. Start Unity project `sdsim` and bring up a scene.
 2. Click the `Play` button and Push button `NN Control over Network` in the race panel.
 3.  Run the following command.
 
 ```
 cd sdsandbox/src
 python run_pokeman.py --model=YOUR_MODEL1_NAME YOUR_MODEL2_NAME ...
+```
+
+## Online Multi-client racing
+One can host a small racing for remote clients as well. We can bring up the server with the executable DonkeySim or the Unity project.
+
+### From the server side
+1. Start Unity project `sdsim` and bring up a scene.
+2. From the left `Hierachy` menu select `Server` prefab. From the right side `Inspector`, set the `Host` of the `Sandbox Server` as `0.0.0.0`, and set your desired `Port`.
+3. Forwarding the desired port with your router and let it accept incoming TCP packets from external networks. The way to doing so differs from different types of routers, so search the Internet for the instruction of doing so. If your PC or router has a firewall, remember to open such port on the firewall too.
+4. Now you can start the server by click the `Play` button and Push button `NN Control over Network` in the race panel.
+5. Share your external IP with the clients.
+
+### From the client side
+1. Once the server is set up, one can join with the following command.
+```
+python predict_client.py --model=YOUR_MODEL --host=EXTERNAL_IP_OF_THE_HOST
 ```
