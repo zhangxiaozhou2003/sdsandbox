@@ -30,7 +30,7 @@ import rospy
 from std_msgs.msg import String
 from rospy.numpy_msg import numpy_msg
 from rospy_tutorials.msg import Floats
-
+from geometry_msgs.msg import Vector3
 
 
 if tf.__version__ == '1.13.1':
@@ -43,7 +43,11 @@ if tf.__version__ == '1.13.1':
     session = Session(config=config)
     keras.backend.set_session(session)
 
-
+manual_output = np.zeros((1,2))
+def manual_callback(data):
+    print(data)
+    manual_output[0,0] = data.x
+    manual_output[0,1] = data.y
 
 class DonkeySimMsgHandler(IMesgHandler):
 
@@ -106,16 +110,18 @@ class DonkeySimMsgHandler(IMesgHandler):
             self.predict(self.img_arr)
             pub_img = self.img_arr.reshape((-1))
             pub.publish(pub_img)
-            print(self.img_arr)
 
             self.img_arr = None
 
             # hello_str = "hello world %s" % rospy.get_time()
             # rospy.loginfo(hello_str)
         #    rate.sleep()
+    def manual(self):
+        self.parse_outputs(manual_output)
 
     def predict(self, image_array):
         outputs = self.model.predict(image_array)
+        print(outputs.type)
         self.parse_outputs(outputs)
 
 
@@ -179,7 +185,7 @@ def clients_connected(arr):
     return True
 
 
-def go(filename, address, constant_throttle=0, num_cars=1, image_cb=None, rand_seed=None):
+def go(filename, address, constant_throttle=0, num_cars=1, image_cb=None, rand_seed=None, manual=False):
 
     print("loading model", filename)
     model = load_model(filename)
@@ -199,7 +205,10 @@ def go(filename, address, constant_throttle=0, num_cars=1, image_cb=None, rand_s
         try:
             time.sleep(0.02)
             for client in clients:
-                client.msg_handler.update()
+                if(manual== False):
+                    client.msg_handler.update()
+                else:
+                    client.msg_handler.manual()
         except KeyboardInterrupt:
             # unless some hits Ctrl+C and then we get this interrupt
             print('stopping')
@@ -214,10 +223,12 @@ if __name__ == "__main__":
     parser.add_argument('--num_cars', type=int, default=1, help='how many cars to spawn')
     parser.add_argument('--constant_throttle', type=float, default=0.0, help='apply constant throttle')
     parser.add_argument('--rand_seed', type=int, default=0, help='set road generation random seed')
+    parser.add_argument('--manual', type=bool, default=False, help='manual mode')
     args = parser.parse_args()
 
     address = (args.host, args.port)
     pub = rospy.Publisher('chatter', numpy_msg(Floats), queue_size=10)
+    rospy.Subscriber("manual", Vector3, manual_callback)
     rospy.init_node('talker', anonymous=True)
     #rate = rospy.Rate(10) # 10hz
-    go(args.model, address, args.constant_throttle, num_cars=args.num_cars, rand_seed=args.rand_seed)
+    go(args.model, address, args.constant_throttle, num_cars=args.num_cars, rand_seed=args.rand_seed, manual = args.manual)
