@@ -17,7 +17,7 @@ def talker():
     ik_pose.orientation.z = 0
     ik_pose.orientation.w = 1
     while not rospy.is_shutdown():
-        ik_pose.position.y = ik_pose.position.y + 0.01
+        ik_pose.position.x = ik_pose.position.x + 0.01
         ik_pose.orientation.y = ik_pose.orientation.y + 1
         rospy.loginfo(ik_pose)
         pub.publish(ik_pose)
