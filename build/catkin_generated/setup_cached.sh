@@ -7,8 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/xinlong/sdbox_xlz/sdsandbox/devel:$CMAKE_PREFIX_PATH"
-export PATH="/opt/ros/melodic/bin:/home/xinlong/miniconda3/envs/donkey/bin:/home/xinlong/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+export PKG_CONFIG_PATH="/home/xinlong/sdbox_xlz/sdsandbox/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/xinlong/sdbox_xlz/sdsandbox/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/xinlong/sdbox_xlz/sdsandbox/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/xinlong/sdbox_xlz/sdsandbox/src:$ROS_PACKAGE_PATH"

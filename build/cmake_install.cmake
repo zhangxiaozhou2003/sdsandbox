@@ -128,6 +128,21 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 file(INSTALL DESTINATION "/home/xinlong/sdbox_xlz/sdsandbox/install" TYPE FILE FILES "/home/xinlong/sdbox_xlz/sdsandbox/build/catkin_generated/installspace/.rosinstall")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xinlong/sdbox_xlz/sdsandbox/build/catkin_generated/installspace/ros_test.pc")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_test/cmake" TYPE FILE FILES
+    "/home/xinlong/sdbox_xlz/sdsandbox/build/catkin_generated/installspace/ros_testConfig.cmake"
+    "/home/xinlong/sdbox_xlz/sdsandbox/build/catkin_generated/installspace/ros_testConfig-version.cmake"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ros_test" TYPE FILE FILES "/home/xinlong/sdbox_xlz/sdsandbox/src/package.xml")
+endif()
+
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/xinlong/sdbox_xlz/sdsandbox/build/gtest/cmake_install.cmake")

@@ -12,7 +12,7 @@
 //     // Start is called before the first frame update
 //     void Start()
 //     {
-//         offset = transform.position - player.transform.position;    
+//         offset = transform.position - player.transform.position;
 //     }
 
 //     // Update is called once per frame
@@ -26,35 +26,35 @@
  using UnityEngine;
  using System.Collections;
  using System.Collections.Generic;
- 
+
  public class CameraController : MonoBehaviour
  {
      [SerializeField]
      private Transform target;
- 
+
      [SerializeField]
      private Vector3 offsetPosition;
- 
+
      [SerializeField]
      private Space offsetPositionSpace = Space.Self;
- 
+
      [SerializeField]
-     private bool lookAt = true;
- 
+     private bool lookAt = false;
+
      private void Update()
      {
          Refresh();
      }
- 
+
      public void Refresh()
      {
          if(target == null)
          {
              Debug.LogWarning("Missing target ref !", this);
- 
+
              return;
          }
- 
+
          // compute position
          if(offsetPositionSpace == Space.Self)
          {
@@ -64,7 +64,7 @@
          {
              transform.position = target.position + offsetPosition;
          }
- 
+
          // compute rotation
          if(lookAt)
          {

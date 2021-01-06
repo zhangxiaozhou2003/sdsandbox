@@ -121,7 +121,6 @@ class DonkeySimMsgHandler(IMesgHandler):
 
     def predict(self, image_array):
         outputs = self.model.predict(image_array)
-        print(outputs.type)
         self.parse_outputs(outputs)
 
 
