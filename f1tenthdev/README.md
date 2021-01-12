@@ -88,4 +88,5 @@ rosrun unity_bridge posePublisher.py
 ```
 rosrun unity_bridge test_listener_ros.py 
 ```
+7. Go to the terminal that bring up F1tenth simulator, press 'n' to get the vehicle run.
 
