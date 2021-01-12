@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/xiaozhou/sdsandbox/catkin_ws/src/f1tenth_simulator/include/f1tenth_simulator/channel.h
+/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src/f1tenth_simulator/include/f1tenth_simulator/channel.h
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
 -
 
-/home/xiaozhou/sdsandbox/catkin_ws/src/f1tenth_simulator/node/mux.cpp
+/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src/f1tenth_simulator/node/mux.cpp
 ros/ros.h
 -
 ackermann_msgs/AckermannDriveStamped.h
@@ -30,7 +30,7 @@ sensor_msgs/Joy.h
 std_msgs/String.h
 -
 f1tenth_simulator/channel.h
-/home/xiaozhou/sdsandbox/catkin_ws/src/f1tenth_simulator/node/f1tenth_simulator/channel.h
+/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src/f1tenth_simulator/node/f1tenth_simulator/channel.h
 
 /opt/ros/melodic/include/ackermann_msgs/AckermannDrive.h
 string

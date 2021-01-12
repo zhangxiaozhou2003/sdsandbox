@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/keyboard.dir/node/keyboard.cpp.o"
-  "/home/xiaozhou/sdsandbox/catkin_ws/devel/lib/f1tenth_simulator/keyboard.pdb"
-  "/home/xiaozhou/sdsandbox/catkin_ws/devel/lib/f1tenth_simulator/keyboard"
+  "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/devel/lib/f1tenth_simulator/keyboard.pdb"
+  "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/devel/lib/f1tenth_simulator/keyboard"
 )
 
 # Per-language clean rules from dependency scanning.

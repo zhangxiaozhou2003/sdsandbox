@@ -1,8 +1,8 @@
-# Install script for directory: /home/xiaozhou/sdsandbox/catkin_ws/src/wall_following
+# Install script for directory: /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src/wall_following
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/xiaozhou/sdsandbox/catkin_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xiaozhou/sdsandbox/catkin_ws/build/wall_following/catkin_generated/installspace/wall_following.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/build/wall_following/catkin_generated/installspace/wall_following.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/wall_following/cmake" TYPE FILE FILES
-    "/home/xiaozhou/sdsandbox/catkin_ws/build/wall_following/catkin_generated/installspace/wall_followingConfig.cmake"
-    "/home/xiaozhou/sdsandbox/catkin_ws/build/wall_following/catkin_generated/installspace/wall_followingConfig-version.cmake"
+    "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/build/wall_following/catkin_generated/installspace/wall_followingConfig.cmake"
+    "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/build/wall_following/catkin_generated/installspace/wall_followingConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/wall_following" TYPE FILE FILES "/home/xiaozhou/sdsandbox/catkin_ws/src/wall_following/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/wall_following" TYPE FILE FILES "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src/wall_following/package.xml")
 endif()
 

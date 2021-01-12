@@ -62,3 +62,30 @@ One can host a small racing for remote clients as well. We can bring up the serv
 ```
 python predict_client.py --model=YOUR_MODEL --host=EXTERNAL_IP_OF_THE_HOST
 ```
+
+### How to estabilish Bridge between F1tenth Simulator and Unity
+1. Bring up Websocket
+```
+roslaunch rosbridge_server rosbridge_websocket.launch
+```
+2. Bring up F1tenth simulator
+```
+roslaunch f1tenth_simulator simulator.launch
+```
+3. Bring up a controller
+```
+rosrun wall_following xiaozhou_zhang_wallfollow.py 
+```
+
+4. open Unity sdsim, click start, bring up the unity env.
+
+5. Bring up the bridge from F1tenth to Unity
+```
+rosrun unity_bridge posePublisher.py
+```
+
+6. Bring up the bridge from Unity to F1tenth
+```
+rosrun unity_bridge test_listener_ros.py 
+```
+

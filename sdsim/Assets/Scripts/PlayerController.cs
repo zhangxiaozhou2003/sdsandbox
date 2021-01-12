@@ -63,9 +63,9 @@ public class PlayerController : MonoBehaviour
         rb.useGravity = false;
         rb.detectCollisions = false;
         Vector3 oldFramePos = RosConnect.GetComponent<RosSharp.RosBridgeClient.PoseStampedSubscriber>().position;
-        rb.transform.position = new Vector3(oldFramePos[2], -oldFramePos[0],oldFramePos[1]);
+        rb.transform.position = new Vector3(oldFramePos[0], oldFramePos[1]+ 0.5f,oldFramePos[2]);
         Quaternion oldFrameRot = RosConnect.GetComponent<RosSharp.RosBridgeClient.PoseStampedSubscriber>().rotation;
-        rb.transform.rotation = Quaternion.Euler(-oldFrameRot[2], oldFrameRot[0],-oldFrameRot[1]);
+        rb.transform.rotation = oldFrameRot;
 
 
         // float step = speed * Time.deltaTime;

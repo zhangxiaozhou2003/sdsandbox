@@ -67,14 +67,14 @@ set(f1tenth_simulator_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(f1tenth_simulator_SOURCE_PREFIX /home/xiaozhou/sdsandbox/catkin_ws/src/f1tenth_simulator)
-  set(f1tenth_simulator_DEVEL_PREFIX /home/xiaozhou/sdsandbox/catkin_ws/devel)
+  set(f1tenth_simulator_SOURCE_PREFIX /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src/f1tenth_simulator)
+  set(f1tenth_simulator_DEVEL_PREFIX /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/devel)
   set(f1tenth_simulator_INSTALL_PREFIX "")
   set(f1tenth_simulator_PREFIX ${f1tenth_simulator_DEVEL_PREFIX})
 else()
   set(f1tenth_simulator_SOURCE_PREFIX "")
   set(f1tenth_simulator_DEVEL_PREFIX "")
-  set(f1tenth_simulator_INSTALL_PREFIX /home/xiaozhou/sdsandbox/catkin_ws/install)
+  set(f1tenth_simulator_INSTALL_PREFIX /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/install)
   set(f1tenth_simulator_PREFIX ${f1tenth_simulator_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(f1tenth_simulator_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/xiaozhou/sdsandbox/catkin_ws/src/f1tenth_simulator/include " STREQUAL " ")
+if(NOT "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src/f1tenth_simulator/include " STREQUAL " ")
   set(f1tenth_simulator_INCLUDE_DIRS "")
-  set(_include_dirs "/home/xiaozhou/sdsandbox/catkin_ws/src/f1tenth_simulator/include")
+  set(_include_dirs "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src/f1tenth_simulator/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,7 +110,7 @@ if(NOT "/home/xiaozhou/sdsandbox/catkin_ws/src/f1tenth_simulator/include " STREQ
         message(FATAL_ERROR "Project 'f1tenth_simulator' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'f1tenth_simulator' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/xiaozhou/sdsandbox/catkin_ws/src/f1tenth_simulator/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'f1tenth_simulator' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src/f1tenth_simulator/${idir}'.  ${_report}")
     endif()
     _list_append_unique(f1tenth_simulator_INCLUDE_DIRS ${include})
   endforeach()
@@ -131,7 +131,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/xiaozhou/sdsandbox/catkin_ws/devel/lib;/home/xiaozhou/sdsandbox/catkin_ws/devel/lib;/home/xiaozhou/xiaozhou_zhang_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/devel/lib;/home/xinlong/XinlongZheng_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
