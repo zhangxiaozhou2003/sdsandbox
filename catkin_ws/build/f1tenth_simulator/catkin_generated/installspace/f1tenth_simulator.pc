@@ -1,0 +1,8 @@
+prefix=/home/xiaozhou/sdsandbox/catkin_ws/install
+
+Name: f1tenth_simulator
+Description: Description of f1tenth_simulator
+Version: 0.0.1
+Cflags: -I/home/xiaozhou/sdsandbox/catkin_ws/install/include
+Libs: -L/home/xiaozhou/sdsandbox/catkin_ws/install/lib -lf1tenth_simulator
+Requires: message_runtime

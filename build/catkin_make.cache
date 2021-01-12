@@ -1,2 +1,0 @@
-.
--DCATKIN_DEVEL_PREFIX=/home/xinlong/sdbox_xlz/sdsandbox/devel -DCMAKE_INSTALL_PREFIX=/home/xinlong/sdbox_xlz/sdsandbox/install -G Unix Makefiles

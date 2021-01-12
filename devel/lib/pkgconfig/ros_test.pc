@@ -1,8 +1,0 @@
-prefix=/home/xinlong/sdbox_xlz/sdsandbox/devel
-
-Name: ros_test
-Description: Description of ros_test
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/xinlong/sdbox_xlz/sdsandbox/devel/lib 
-Requires: 

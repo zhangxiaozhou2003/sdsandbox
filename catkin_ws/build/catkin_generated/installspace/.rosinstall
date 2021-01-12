@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/xiaozhou/sdsandbox/catkin_ws/install/setup.sh

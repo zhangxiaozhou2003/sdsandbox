@@ -1,0 +1,8 @@
+prefix=/home/xiaozhou/sdsandbox/catkin_ws/devel
+
+Name: wall_following
+Description: Description of wall_following
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/xiaozhou/sdsandbox/catkin_ws/devel/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/xiaozhou/sdsandbox/catkin_ws/install
+
+Name: unity_bridge
+Description: Description of unity_bridge
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/xiaozhou/sdsandbox/catkin_ws/install/lib 
+Requires: 
