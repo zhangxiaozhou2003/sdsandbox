@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src
-# Build directory: /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/build
+# Source directory: /home/xiaozhou/sdsandbox/catkin_ws/src
+# Build directory: /home/xiaozhou/sdsandbox/catkin_ws/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

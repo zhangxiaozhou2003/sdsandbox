@@ -1,8 +1,0 @@
-prefix=/home/xinlong/sdbox_xlz/sdsandbox/devel
-
-Name: f1tenth_simulator
-Description: Description of f1tenth_simulator
-Version: 0.0.1
-Cflags: -I/home/xinlong/sdbox_xlz/sdsandbox/src/f1tenth_simulator/include
-Libs: -L/home/xinlong/sdbox_xlz/sdsandbox/devel/lib -lf1tenth_simulator
-Requires: message_runtime

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/simulator.dir/node/simulator.cpp.o"
-  "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/devel/lib/f1tenth_simulator/simulator.pdb"
-  "/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/devel/lib/f1tenth_simulator/simulator"
+  "/home/xiaozhou/sdsandbox/catkin_ws/devel/lib/f1tenth_simulator/simulator.pdb"
+  "/home/xiaozhou/sdsandbox/catkin_ws/devel/lib/f1tenth_simulator/simulator"
 )
 
 # Per-language clean rules from dependency scanning.

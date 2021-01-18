@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src
+CMAKE_SOURCE_DIR = /home/xiaozhou/sdsandbox/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/build
+CMAKE_BINARY_DIR = /home/xiaozhou/sdsandbox/catkin_ws/build
 
 # Utility rule file for std_msgs_generate_messages_cpp.
 
@@ -63,10 +63,10 @@ f1tenth_simulator/CMakeFiles/std_msgs_generate_messages_cpp.dir/build: std_msgs_
 .PHONY : f1tenth_simulator/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 
 f1tenth_simulator/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	cd /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/build/f1tenth_simulator && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/xiaozhou/sdsandbox/catkin_ws/build/f1tenth_simulator && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : f1tenth_simulator/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 
 f1tenth_simulator/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend:
-	cd /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/src/f1tenth_simulator /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/build /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/build/f1tenth_simulator /home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/build/f1tenth_simulator/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/xiaozhou/sdsandbox/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/xiaozhou/sdsandbox/catkin_ws/src /home/xiaozhou/sdsandbox/catkin_ws/src/f1tenth_simulator /home/xiaozhou/sdsandbox/catkin_ws/build /home/xiaozhou/sdsandbox/catkin_ws/build/f1tenth_simulator /home/xiaozhou/sdsandbox/catkin_ws/build/f1tenth_simulator/CMakeFiles/std_msgs_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : f1tenth_simulator/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
 

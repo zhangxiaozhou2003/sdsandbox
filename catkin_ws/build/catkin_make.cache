@@ -1,2 +1,2 @@
 f1tenth_simulator:unity_bridge:wall_following
--DCATKIN_DEVEL_PREFIX=/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/xinlong/sdbox_xlz/sdsandbox/catkin_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/xiaozhou/sdsandbox/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/xiaozhou/sdsandbox/catkin_ws/install -G Unix Makefiles
